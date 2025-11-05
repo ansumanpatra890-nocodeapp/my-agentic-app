@@ -8,7 +8,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, Dict, List
-from google import genai
+import google.generativeai as genai
 from datetime import datetime
 import os , traceback
 import sys
