@@ -15,6 +15,8 @@ import sys
 
 # Add agents directory to path
 sys.path.append(os.path.dirname(__file__))
+sys.path.append(os.path.join(os.path.dirname(__file__), 'agents'))
+sys.path.append(os.path.join(os.path.dirname(__file__), 'workflow'))
 
 # Import configuration
 from config import AppConfig, ModelConfig
