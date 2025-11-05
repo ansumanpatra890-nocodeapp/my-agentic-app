@@ -8,7 +8,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, Dict, List
-import google.generativeai as genai
+from google import genai
 from datetime import datetime
 import os , traceback
 import sys
@@ -31,9 +31,6 @@ from agents.deployment_agent import CodeDeploymentAgent
 
 # Import workflow
 from workflow.agent_workflow import MultiAgentWorkflow
-
-# Configure Gemini API
-genai.configure(api_key=AppConfig.GEMINI_API_KEY)
 
 # Initialize FastAPI app
 app = FastAPI(
